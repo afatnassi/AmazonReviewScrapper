@@ -14,5 +14,7 @@ namespace Amazon.Scrapper.Entities
 		public string Title { get; set; }
 		public string Content { get; set; }
 		public int NumberOfVotes { get; set; }
+		public virtual Product Product { get; set; }
+		public Guid ProductId { get; set; }
 	}
 }
