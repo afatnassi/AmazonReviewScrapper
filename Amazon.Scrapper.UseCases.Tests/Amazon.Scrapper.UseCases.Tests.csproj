@@ -16,7 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Amazon.Scrapper.Core\Amazon.Scrapper.UseCases.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.Entities\Amazon.Scrapper.Entities.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.UsesCases\Amazon.Scrapper.UseCases.csproj" />
   </ItemGroup>
 
 </Project>
