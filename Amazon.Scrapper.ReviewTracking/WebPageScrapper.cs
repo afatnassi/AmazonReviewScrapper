@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amazon.Scrapper.UseCases
+namespace Amazon.Scrapper.ReviewTracking
 {
 	public class WebPageScrapper : IWebPageScrapper
 	{

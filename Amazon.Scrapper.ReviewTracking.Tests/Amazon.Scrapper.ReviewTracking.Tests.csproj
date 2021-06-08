@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -17,7 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Amazon.Scrapper.Entities\Amazon.Scrapper.Entities.csproj" />
-    <ProjectReference Include="..\Amazon.Scrapper.UsesCases\Amazon.Scrapper.UseCases.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.ReviewTracking\Amazon.Scrapper.ReviewTracking.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.UsesCases\Amazon.Scrapper.ReviewTracking.csproj" />
   </ItemGroup>
 
 </Project>

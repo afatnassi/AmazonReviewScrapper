@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Amazon.Scrapper.Entities
 {
-	public class Review
+	public class Review : IEntity
 	{
 		public Guid Id { get; set; }
 		public string ProfileName { get; set; }

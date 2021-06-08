@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.Entities", "Amazon.Scrapper.Entities\Amazon.Scrapper.Entities.csproj", "{ACD47821-4682-4C72-880B-34F787C0C537}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.UseCases.Tests", "Amazon.Scrapper.UseCases.Tests\Amazon.Scrapper.UseCases.Tests.csproj", "{B4B635C5-D311-494A-A078-018EF9834D66}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.Api", "Amazon.Scrapper.Api\Amazon.Scrapper.Api.csproj", "{E2CBD658-A7B4-42BD-84F1-BAB23167C310}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.UseCases", "Amazon.Scrapper.UsesCases\Amazon.Scrapper.UseCases.csproj", "{CEDA3406-A8A4-42FC-B0A5-8B3D344CA2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.EF", "Amazon.Scrapper.EF\Amazon.Scrapper.EF.csproj", "{D6616046-FEEF-436D-87A7-0351C793CE80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.Scrapper.EF", "Amazon.Scrapper.EF\Amazon.Scrapper.EF.csproj", "{D6616046-FEEF-436D-87A7-0351C793CE80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.ReviewTracking", "Amazon.Scrapper.ReviewTracking\Amazon.Scrapper.ReviewTracking.csproj", "{7F9F94D9-6F2E-4054-A8DD-7D2C31EA9EC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.ReviewTracking.Tests", "Amazon.Scrapper.ReviewTracking.Tests\Amazon.Scrapper.ReviewTracking.Tests.csproj", "{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,22 +23,22 @@ Global
 		{ACD47821-4682-4C72-880B-34F787C0C537}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD47821-4682-4C72-880B-34F787C0C537}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD47821-4682-4C72-880B-34F787C0C537}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4B635C5-D311-494A-A078-018EF9834D66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4B635C5-D311-494A-A078-018EF9834D66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4B635C5-D311-494A-A078-018EF9834D66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4B635C5-D311-494A-A078-018EF9834D66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2CBD658-A7B4-42BD-84F1-BAB23167C310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E2CBD658-A7B4-42BD-84F1-BAB23167C310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CBD658-A7B4-42BD-84F1-BAB23167C310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CBD658-A7B4-42BD-84F1-BAB23167C310}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CEDA3406-A8A4-42FC-B0A5-8B3D344CA2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CEDA3406-A8A4-42FC-B0A5-8B3D344CA2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CEDA3406-A8A4-42FC-B0A5-8B3D344CA2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CEDA3406-A8A4-42FC-B0A5-8B3D344CA2FD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6616046-FEEF-436D-87A7-0351C793CE80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6616046-FEEF-436D-87A7-0351C793CE80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6616046-FEEF-436D-87A7-0351C793CE80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6616046-FEEF-436D-87A7-0351C793CE80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F9F94D9-6F2E-4054-A8DD-7D2C31EA9EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F9F94D9-6F2E-4054-A8DD-7D2C31EA9EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F9F94D9-6F2E-4054-A8DD-7D2C31EA9EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F9F94D9-6F2E-4054-A8DD-7D2C31EA9EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Amazon.Scrapper.Entities
 {
-	public class Product
+	public class Product : IEntity
 	{
 		public Product()
 		{

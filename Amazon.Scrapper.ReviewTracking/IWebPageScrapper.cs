@@ -3,7 +3,7 @@ using AngleSharp.Dom;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Amazon.Scrapper.UseCases
+namespace Amazon.Scrapper.ReviewTracking
 {
 	public interface IWebPageScrapper
 	{

@@ -8,7 +8,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Amazon.Scrapper.UseCases.Tests
+namespace Amazon.Scrapper.ReviewTracking.Tests
 {
 	[TestClass]
 	public class WebPageScrapperTests
