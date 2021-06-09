@@ -9,13 +9,13 @@ This solution should cover these two features:
 
 * As an API Client, I want to query the latest reviews of the products I have tracked.
 
--> The are two endpoint to retrieve reviews; one where the client can see all teh reveiws and one where the client can see all teh reviews for a certain ASIN
+-> The are two endpoint to retrieve reviews; one where the client can see all the reveiws and one where the client can see all the reviews for a certain ASIN
 
 ##Imporvements:
 
 * Setup a static website ( mock amazon website) and add integration tests that run on that website/page.
-* Rethink the storage provider for another more suitable to handle huge amounts of data; the sqllite used here can be easily swapped by another porovider ( only one project is implementing ef logic and can be swapped with another project (CosmosDb ??) without breaking the solution.
-* Use autofac for better Di management; create config project where you create autofac modules, inside those modules you can write the di config and then load those modules in teh startup, that way we can have internal implementation and public interfaces only.
+* Rethink the storage provider for another more suitable to handle huge amounts of data; the sqllite used here can be easily swapped by another porovider ( only one project is implementing ef logic) and can be swapped with another project (CosmosDb ??) without breaking the solution.
+* Use autofac for better Di management; create config project where you create autofac modules, inside those modules you can write the di config and then load those modules in the startup, that way we can have internal implementation and public interfaces only.
 * Improve logging
 * improve exception handling
 
