@@ -35,11 +35,13 @@ namespace Amazon.Scrapper.ReviewTracking
 			string mailBody = "";
 
 			List<Review> reviews = await AmazonScrapper.ScrapReviewWebsite(url);
-
+			var product = ProductRepo.GetAll().Find(p => p.ASIN == ASIN);
 			var storedReviews = ReviewRepo.GetAll();
 
 			foreach (Review dbReview in storedReviews)
 			{
+
+
 				var existingReview = reviews.Find(r => ASIN == dbReview.Product.ASIN
 					&& r.ProfileName == dbReview.ProfileName);
 
@@ -52,7 +54,7 @@ namespace Amazon.Scrapper.ReviewTracking
 
 			foreach (Review review in reviews)
 			{
-				var existingReview = storedReviews.Find(r => r.Product.ASIN == ASIN
+				var existingReview = storedReviews.Find(r => r.ProductId == product.Id
 					&& r.ProfileName == review.ProfileName);
 
 				if (existingReview != null)
@@ -67,8 +69,7 @@ namespace Amazon.Scrapper.ReviewTracking
 				}
 				else 
 				{
-					mailBody += $"NEW: a new review of {review.ProfileName} for product with ASIN {ASIN} has been added";
-					var product = ProductRepo.GetAll().Find(p => p.ASIN == ASIN);
+					mailBody += $"NEW: a new review of {review.ProfileName} for product with ASIN {ASIN} has been added";				
 					review.Product = product;
 					ReviewRepo.Add(review);
 				}
