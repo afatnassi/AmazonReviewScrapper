@@ -21,7 +21,6 @@ This solution should cover these two features:
 * Extract configs from code and store them in the config ( and when deployed in a keyVault)
 * Use a push notification system instead of sending email to notify clients
 
-
 ##Note;
 
 The modules "ReviewTracking" for the first feature and "Reviews" for the second feature , are independent and can be deployed seperatly.
