@@ -32,9 +32,22 @@ namespace Amazon.Scrapper.EF.Repositories
 			return entity;
 		}
 
+		public TEntity Update(TEntity entity)
+		{
+			context.Set<TEntity>().Update(entity);
+			context.SaveChanges();
+			return entity;
+		}
+
 		public List<TEntity> GetAll()
 		{
 			return context.Set<TEntity>().ToList();
+		}
+
+		public void AddRange(List<TEntity> entities)
+		{
+			context.Set<TEntity>().AddRange(entities);
+			context.SaveChanges();
 		}
 	}
 }

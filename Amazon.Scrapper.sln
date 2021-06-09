@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.ReviewTrack
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Amazon.Scrapper.ReviewTracking.Tests", "Amazon.Scrapper.ReviewTracking.Tests\Amazon.Scrapper.ReviewTracking.Tests.csproj", "{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon.Scrapper.Reviews", "Amazon.Scrapper.Reviews\Amazon.Scrapper.Reviews.csproj", "{5627FAB5-4D34-4409-B0BD-44F2215D4A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A577F3C4-BB24-4E40-AAB3-6470D9CD151E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5627FAB5-4D34-4409-B0BD-44F2215D4A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5627FAB5-4D34-4409-B0BD-44F2215D4A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5627FAB5-4D34-4409-B0BD-44F2215D4A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5627FAB5-4D34-4409-B0BD-44F2215D4A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

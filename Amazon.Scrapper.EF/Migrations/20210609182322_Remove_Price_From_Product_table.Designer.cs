@@ -3,14 +3,16 @@ using System;
 using Amazon.Scrapper.EF;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Amazon.Scrapper.EF.Migrations
 {
     [DbContext(typeof(AmazonScrapperContext))]
-    partial class AmazonScrapperContextModelSnapshot : ModelSnapshot
+    [Migration("20210609182322_Remove_Price_From_Product_table")]
+    partial class Remove_Price_From_Product_table
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

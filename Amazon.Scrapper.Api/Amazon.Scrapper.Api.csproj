@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Amazon.Scrapper.EF\Amazon.Scrapper.EF.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.Reviews\Amazon.Scrapper.Reviews.csproj" />
+    <ProjectReference Include="..\Amazon.Scrapper.ReviewTracking\Amazon.Scrapper.ReviewTracking.csproj" />
   </ItemGroup>
 
 </Project>

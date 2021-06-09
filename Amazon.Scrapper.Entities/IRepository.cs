@@ -10,6 +10,8 @@ namespace Amazon.Scrapper.Entities
 	{
 		List<T> GetAll();
 		T Add(T entity);
+		T Update(T entity);
 		T Delete(T entity);
+		void AddRange(List<T> entity);
 	}
 }

@@ -1,4 +1,4 @@
-using Amazon.Scrapper.Entities;
+﻿using Amazon.Scrapper.Entities;
 using AngleSharp;
 using AngleSharp.Dom;
 using FluentAssertions;
@@ -11,20 +11,21 @@ using System.Threading.Tasks;
 namespace Amazon.Scrapper.ReviewTracking.Tests
 {
 	[TestClass]
-	public class WebPageScrapperTests
+	public class AmazonScrapperTests
 	{
-		private IWebPageScrapper _webPageScrapper;
+		private IAmazonScrapper _webPageScrapper;
 		private ServiceCollection _services;
 		private IServiceProvider _serviceProvider;
+		private readonly string productReviewUrl = @"https://www.amazon.com/product-reviews/B082XY23D5";
 
 		[TestInitialize]
 		public void SetUp()
 		{
 			_services = new ServiceCollection();
-			_services.AddTransient<IWebPageScrapper, WebPageScrapper>();
+			_services.AddTransient<IAmazonScrapper, AmazonScrapper>();
 
 			_serviceProvider = _services.BuildServiceProvider();
-			_webPageScrapper = _serviceProvider.GetService<IWebPageScrapper>();
+			_webPageScrapper = _serviceProvider.GetService<IAmazonScrapper>();
 		}
 
 		[TestMethod]
@@ -86,8 +87,7 @@ namespace Amazon.Scrapper.ReviewTracking.Tests
 			reviews.First().Rating.Should().Be(excpectedReview.Rating);
 			reviews.First().NumberOfVotes.Should().Be(excpectedReview.NumberOfVotes);
 		}
-
-		private static async Task<IDocument> GetDocument(string source)
+			private static async Task<IDocument> GetDocument(string source)
 		{
 			var config = Configuration.Default.WithDefaultLoader();
 			var context = BrowsingContext.New(config);

@@ -1,4 +1,8 @@
 using Amazon.Scrapper.EF;
+using Amazon.Scrapper.EF.Repositories;
+using Amazon.Scrapper.Entities;
+using Amazon.Scrapper.Reviews;
+using Amazon.Scrapper.ReviewTracking;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -37,6 +41,13 @@ namespace Amazon.Scrapper
 
 			services.AddDbContext<AmazonScrapperContext>( options =>
 				options.UseSqlite(@"Data Source=C:\AmazonScrapper.db"));
+
+			services.AddTransient<IAmazonScrapper, AmazonScrapper>();
+			services.AddTransient<IReviewTracker, ReviewTracker>();
+			services.AddTransient<IEmailSender, EmailSender>();
+			services.AddTransient<IReviewManager, ReviewManager>();
+			services.AddScoped<IRepository<Review>, ReviewRepository>();
+			services.AddScoped<IRepository<Product>, ProductRepository>();
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +70,12 @@ namespace Amazon.Scrapper
 			{
 				endpoints.MapControllers();
 			});
+
+			using (var scope = app.ApplicationServices.CreateScope())
+			{
+				scope.ServiceProvider.GetRequiredService<AmazonScrapperContext>().Database.SetCommandTimeout(int.MaxValue);
+				scope.ServiceProvider.GetRequiredService<AmazonScrapperContext>().Database.Migrate();
+			}
 		}
 	}
 }
