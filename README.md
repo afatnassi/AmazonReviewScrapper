@@ -20,6 +20,7 @@ This solution should cover these two features:
 * Improve exception handling
 * Extract configs from code and store them in the config ( and when deployed in a keyVault)
 * Use a push notification system instead of sending email to notify clients
+* Think about using OData for the review querying.
 
 ##Note;
 
