@@ -17,7 +17,8 @@ This solution should cover these two features:
 * Rethink the storage provider for another more suitable to handle huge amounts of data; the sqllite used here can be easily swapped by another porovider ( only one project is implementing ef logic) and can be swapped with another project (CosmosDb ??) without breaking the solution.
 * Use autofac for better Di management; create config project where you create autofac modules, inside those modules you can write the di config and then load those modules in the startup, that way we can have internal implementation and public interfaces only.
 * Improve logging
-* improve exception handling
+* Improve exception handling
+* Extract configs from code and store them in the config ( and when deployed in a keyVault)
 
 
 ##Note;
