@@ -36,6 +36,11 @@ namespace Amazon.Scrapper.ReviewTracking
 
 			List<Review> reviews = await AmazonScrapper.ScrapReviewWebsite(url);
 			var product = ProductRepo.GetAll().Find(p => p.ASIN == ASIN);
+
+			if (product == null)
+			{
+				throw new Exception($"This product with ASIN {ASIN} is not tracked, you need to track it before you can scrap its reviews");
+			}
 			var storedReviews = ReviewRepo.GetAll();
 
 			foreach (Review dbReview in storedReviews)
